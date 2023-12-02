@@ -5,11 +5,11 @@ RSpec.describe Like, type: :model do
   let(:post) { user.posts.create(title: 'title', CommentsCounter: 0, LikesCounter: 0) }
 
   it 'should update post likes counter' do
-    l1 = post.likes.create(user_id: user.id, post_id: post.id)
-    l2 = post.likes.create(user_id: user.id, post_id: post.id)
-    l3 = post.likes.create(user_id: user.id, post_id: post.id)
-    l4 = post.likes.create(user_id: user.id, post_id: post.id)
-    l5 = post.likes.create(user_id: user.id, post_id: post.id)
+    post.likes.create(user_id: user.id, post_id: post.id)
+    post.likes.create(user_id: user.id, post_id: post.id)
+    post.likes.create(user_id: user.id, post_id: post.id)
+    post.likes.create(user_id: user.id, post_id: post.id)
+    post.likes.create(user_id: user.id, post_id: post.id)
 
     post.reload
 

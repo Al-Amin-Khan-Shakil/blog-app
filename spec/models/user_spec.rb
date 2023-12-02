@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.new(name: "Name 1", postsCounter: 0) }
-  
+  let(:user) { User.new(name: 'Name 1', postsCounter: 0) }
+
   before { user.save }
 
   it 'shoud be valid' do

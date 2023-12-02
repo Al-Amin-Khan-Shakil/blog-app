@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:user) {User.create(name: 'user1', postsCounter: 0)}
+  let(:user) { User.create(name: 'user1', postsCounter: 0) }
   let(:post) { user.posts.create(title: 'title1', CommentsCounter: 0, LikesCounter: 0) }
 
   it 'should be valid post' do
@@ -18,12 +18,12 @@ RSpec.describe Post, type: :model do
     expect(post).to_not be_valid
   end
 
-  it 'CommentsCounter should be integer' do 
+  it 'CommentsCounter should be integer' do
     post.CommentsCounter = 'a'
     expect(post).to_not be_valid
   end
 
-  it 'LikesCounter should be integer' do 
+  it 'LikesCounter should be integer' do
     post.LikesCounter = 'a'
     expect(post).to_not be_valid
   end
@@ -35,12 +35,12 @@ RSpec.describe Post, type: :model do
     c4 = post.comments.create(user_id: user.id, post_id: post.id)
     c5 = post.comments.create(user_id: user.id, post_id: post.id)
 
-    expect(post.most_recent_comments).to eq([c5,c4,c3,c2,c1])
+    expect(post.most_recent_comments).to eq([c5, c4, c3, c2, c1])
   end
 
   it 'update the post counter' do
-    post1 = user.posts.create(title: 'title1', CommentsCounter: 0, LikesCounter: 0)
-    post2 = user.posts.create(title: 'title1', CommentsCounter: 0, LikesCounter: 0)
+    user.posts.create(title: 'title1', CommentsCounter: 0, LikesCounter: 0)
+    user.posts.create(title: 'title1', CommentsCounter: 0, LikesCounter: 0)
     user.reload
     expect(user.postsCounter).to eq 2
   end
