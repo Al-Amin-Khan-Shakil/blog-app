@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
-  describe "GET /index" do
-    it "should be response successull" do
+RSpec.describe 'Posts', type: :request do
+  describe 'GET /index' do
+    it 'should be response successull' do
       get '/users/:id/posts'
       expect(response).to have_http_status(:ok)
     end

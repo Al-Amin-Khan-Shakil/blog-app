@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :request do
-  describe "GET /index" do
-    it "should be a successful response" do
+RSpec.describe 'Users', type: :request do
+  describe 'GET /index' do
+    it 'should be a successful response' do
       get '/users'
       expect(response).to have_http_status(200)
     end
@@ -12,7 +12,7 @@ RSpec.describe "Users", type: :request do
       expect(response).to render_template('users/index')
     end
 
-    it "should include the placeholder" do
+    it 'should include the placeholder' do
       get '/users'
       expect(response.body).to include('Here is the users index page!')
     end
