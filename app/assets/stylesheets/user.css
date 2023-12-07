@@ -1,8 +1,18 @@
 .user-item {
-  border: 3px solid rgb(255, 181, 96);
-  padding: 20px;
   border-radius: 8px;
   margin: 20px 0;
+  display: flex;
+  column-gap: 30px;
+}
+
+.title-container {
+  flex: 1;
+  border: 3px solid rgb(255, 181, 96);
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .user-link {
@@ -23,6 +33,8 @@ body {
   height: 200px;
   position: relative;
   overflow: hidden;
+  border: 3px solid rgb(255, 181, 96);
+  border-radius: 8px;
 }
 
 .img-container img {
@@ -71,6 +83,13 @@ body {
 }
 
 .full-post {
+  border: 3px solid rgb(255, 181, 96);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.bio-container {
   border: 3px solid rgb(255, 181, 96);
   padding: 20px;
   border-radius: 8px;

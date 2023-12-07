@@ -1,5 +1,9 @@
 <section class = "user-section">
   <%= render @user %>
+  <div class = "bio-container">
+    <h3>Bio</h3>
+    <p class = "bio"> <%= @user.bio %> </p>
+  </div>
   <div class = 'recent-posts'>
     <% if @user.most_recent_posts.any? %>
       <% @user.most_recent_posts.each do |post| %>
