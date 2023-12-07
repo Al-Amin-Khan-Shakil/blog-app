@@ -1,1 +1,21 @@
-<h1>Here is the index for posts</h1>
+<div clsss = 'user-item'>
+  <div class = 'img-container'>
+    <img src="<%= @user.photo %>" alt="Description of your image">
+  </div>
+  <div class = 'title-container'>
+    <h2> <%= @user.name -%> </h2>
+    <p> Number of posts: <%= @user.postsCounter -%> </p>
+  </div>
+</div>
+<div class='user-posts'>
+  <% @posts.each do |post| %>
+    <div class='post-item'>
+      <h3><%= post.title %></h3>
+      <p><%= post.text %></p>
+      <div>
+        <p>Comments: <%= post.CommentsCounter %></p>
+        <p>Likes: <%= post.LikesCounter %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
