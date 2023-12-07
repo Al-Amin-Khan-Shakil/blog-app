@@ -1,0 +1,33 @@
+.user-item {
+    border: 2px solid rgb(36, 33, 33);
+    padding: 20px;
+    background: rgba(255, 0, 0, 0.493);
+}
+
+.user-link {
+    text-decoration: none;
+    color: #00c742;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+#users {
+    padding: 20px;
+}
+
+.img-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+}

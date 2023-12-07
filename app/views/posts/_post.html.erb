@@ -1,0 +1,8 @@
+<div class = 'post-item'>
+    <p> <%= post.title %> </p>
+    <p> <%= truncate(post.text, length: 250) %> </p>
+    <div>
+    <p>Comments: <%= post.CommentsCounter -%>
+    <p>Likes: <%= post.LikesCounter %>
+    </div>
+</div>

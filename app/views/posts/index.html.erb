@@ -1,21 +1,17 @@
-<div clsss = 'user-item'>
-  <div class = 'img-container'>
-    <img src="<%= @user.photo %>" alt="Description of your image">
-  </div>
-  <div class = 'title-container'>
-    <h2> <%= @user.name -%> </h2>
-    <p> Number of posts: <%= @user.postsCounter -%> </p>
-  </div>
-</div>
+<%= render @user %>
 <div class='user-posts'>
   <% @posts.each do |post| %>
-    <div class='post-item'>
-      <h3><%= post.title %></h3>
-      <p><%= post.text %></p>
-      <div>
-        <p>Comments: <%= post.CommentsCounter %></p>
-        <p>Likes: <%= post.LikesCounter %></p>
-      </div>
+    <a href="<%= user_post_path(@user, post) %>" >
+    <%= render post %>
+    </a>
+    <div>
+      <% if post.most_recent_comments.any? %>
+        <% post.most_recent_comments.each do |comment| %>
+          <p> <%= comment.user.name %> : <%= comment.text %> </p>
+        <% end %>
+      <% else %>
+        <p> there is no comment </p>
+      <% end %>
     </div>
   <% end %>
 </div>

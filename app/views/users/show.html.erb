@@ -1,29 +1,10 @@
 
-<div clsss = 'user-item'>
-  <div class = 'img-container'>
-    <img src="<%= @user.photo %>" alt="Description of your image">
-  </div>
-  <div class = 'title-container'>
-    <h2> <%= @user.name -%> </h2>
-    <p> Number of posts: <%= @user.postsCounter -%> </p>
-  </div>
-  <div class = 'bio-container'>
-    <h3>Bio</h3>
-    <p><%= @user.bio %><p>
-  </div>
-</div>
+<%= render @user %>
 <div class = 'recent-posts'>
   <% if @user.most_recent_posts.any? %>
     <ul>
       <% @user.most_recent_posts.each do |post| %>
-        <div>
-          <p> <%= post.title %> </p>
-          <p> <%= post.text %> </p>
-          <div>
-            <p>Comments: <%= post.CommentsCounter -%>
-            <p>Likes: <%= post.LikesCounter %>
-          </div>
-        </div>
+        <%= render post %>
       <% end %>
     </ul>
   <% else %>
