@@ -1,78 +1,78 @@
 .user-item {
-    border: 3px solid rgb(255, 181, 96);
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
+  border: 3px solid rgb(255, 181, 96);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
 }
 
 .user-link {
-    text-decoration: none;
-    color: #042d4e;
+  text-decoration: none;
+  color: #042d4e;
 }
 
 body {
-    background-color: rgb(157, 248, 218);
+  background-color: rgb(157, 248, 218);
 }
 
 #users {
-    padding: 10px;
+  padding: 10px;
 }
 
 .img-container {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
 }
 
 .img-container img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
 }
 
 .post-item {
-    border: 3px solid rgb(255, 181, 96);
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
+  border: 3px solid rgb(255, 181, 96);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
 }
 
 .see-all-post {
-    text-decoration: none;
-    color: White;
-    background-color: #042d4e;
-    border-radius: 8px;
-    padding: 16px 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #042d4e;
+  border-radius: 8px;
+  padding: 16px 10px;
 }
 
 .post-link {
-    color: #042d4e;
-    text-decoration: none;
+  color: #042d4e;
+  text-decoration: none;
 }
 
 .comments {
-    border: 3px solid rgb(255, 181, 96);
-    padding: 6px;
-    border-radius: 8px;
-    margin: 8px 0;
+  border: 3px solid rgb(255, 181, 96);
+  padding: 6px;
+  border-radius: 8px;
+  margin: 8px 0;
 }
 
 .pagination {
-    text-decoration: none;
-    color: White;
-    background-color: #042d4e;
-    border-radius: 8px;
-    padding: 16px 10px;
-    width: 100px;
-    text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #042d4e;
+  border-radius: 8px;
+  padding: 16px 10px;
+  width: 100px;
+  text-align: center;
 }
 
 .full-post {
-    border: 3px solid rgb(255, 181, 96);
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
+  border: 3px solid rgb(255, 181, 96);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
 }
