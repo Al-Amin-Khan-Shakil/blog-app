@@ -1,0 +1,13 @@
+<% if local_assigns[:link] %>
+  <a href = "<%=user_path(user)%>" class= "user-link">
+<% end %>
+    <div class = 'user-item'>
+      <div class = 'img-container'>
+        <img src="<%= user.photo %>" alt="Description of your image">
+      </div>
+      <div class = 'title-container'>
+        <h2> <%= user.name -%> </h2>
+        <p> Number of posts: <%= user.postsCounter -%> </p>
+      </div>
+    </div>   
+  </a>
