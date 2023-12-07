@@ -1,9 +1,9 @@
-<% if @users.blank? %>
-  <h1> There are no users in the system (Join as a User)</h1>
-<% else %>
-  <div id = 'users'>
-    
-      <%= render @users, link: true %>
-    
-  </div>
-<% end %>
+<section class = "users-section">
+  <% if @users.blank? %>
+    <h1> There are no users in the system (Join as a User)</h1>
+  <% else %>
+    <div id = 'users'>
+        <%= render @users, link: true %>
+    </div>
+  <% end %>
+</section>

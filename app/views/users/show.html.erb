@@ -1,14 +1,13 @@
-
-<%= render @user %>
-<div class = 'recent-posts'>
-  <% if @user.most_recent_posts.any? %>
-    <ul>
+<section class = "user-section">
+  <%= render @user %>
+  <div class = 'recent-posts'>
+    <% if @user.most_recent_posts.any? %>
       <% @user.most_recent_posts.each do |post| %>
-        <%= render post %>
+      <%= render post %>
       <% end %>
-    </ul>
-  <% else %>
-    <p>The user have no post yet!</p>
-  <% end %>
-</div>
-<a href ="<%=user_posts_path(@user)%>">See All Posts</a>
+    <% else %>
+      <p>The user have no post yet!</p>
+    <% end %>
+  </div>
+  <a href ="<%=user_posts_path(@user)%>" class = "see-all-post" >See All Posts</a>
+</section>

@@ -1,10 +1,11 @@
-<%= render @user %>
-<div class='user-posts'>
-  <% @posts.each do |post| %>
-    <a href="<%= user_post_path(@user, post) %>" >
-    <%= render post %>
+<section class = "post-sections">
+  <%= render @user %>
+  <div class='user-posts'>
+    <% @posts.each do |post| %>
+    <a href="<%= user_post_path(@user, post) %>" class = "post-link">
+      <%= render post %>
     </a>
-    <div>
+    <div class = "comments">
       <% if post.most_recent_comments.any? %>
         <% post.most_recent_comments.each do |comment| %>
           <p> <%= comment.user.name %> : <%= comment.text %> </p>
@@ -13,5 +14,7 @@
         <p> there is no comment </p>
       <% end %>
     </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+  <p class = "pagination"> Pagination </p>
+</section>

@@ -1,14 +1,16 @@
-<div class = "full-post">
-  <div class = "title">
-    <p> <%= @post.title %> </p>
-    <p> Comments: <%= @post.CommentsCounter %>, Likes: <%= @post.LikesCounter %></p>
+<section class = "post-section">
+  <div class = "full-post">
+    <div class = "title">
+      <p> <%= @post.title %> </p>
+      <p> Comments: <%= @post.CommentsCounter %>, Likes: <%= @post.LikesCounter %></p>
+    </div>
+    <div class = "post">
+      <p> <%= @post.text %> </p>
+    </div>
   </div>
-  <div>
-    <p> <%= @post.text %> </p>
-  </div>
-</div>
-<div class = "comments">
-  <% @post.comments.each do |comment| %>
+  <div class = "comments">
+    <% @post.comments.each do |comment| %>
     <p> <%= comment.user.name %> : <%= comment.text %> </p>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+</section>
