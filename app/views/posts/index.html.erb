@@ -1,5 +1,6 @@
 <section class = "post-sections">
   <%= render @user %>
+  <%= link_to 'Add New Post', new_user_post_path(@user), class: "add-post" %>
   <div class='user-posts'>
     <% @posts.each do |post| %>
     <a href="<%= user_post_path(@user, post) %>" class = "post-link">
