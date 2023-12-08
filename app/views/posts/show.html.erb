@@ -13,4 +13,6 @@
     <p> <%= comment.user.name %> : <%= comment.text %> </p>
     <% end %>
   </div>
+  <div class = "opinion">
+    <%= link_to "Add new comment", new_user_post_comment_path(@post.author_id, @post), class: 'add-comment' %> 
 </section>
