@@ -15,4 +15,8 @@
   </div>
   <div class = "opinion">
     <%= link_to "Add new comment", new_user_post_comment_path(@post.author_id, @post), class: 'add-comment' %> 
+    <%= form_with url: user_post_likes_path(@post.author_id, @post), method: :post, local: true do |f| %>
+      <%= f.submit "Like Post" , class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </section>
