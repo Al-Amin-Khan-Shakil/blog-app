@@ -54,6 +54,7 @@
 - **Unit testing**
 - **Database**
 - **Authentication**
+- **Integration Test**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,14 +101,20 @@ Install this project with:
 - Twitter: [Al Amin Khan Shakil](https://twitter.com/AlAminKhan85004)
 - LinkedIn: [Al Amin Khan Shakil](https://www.linkedin.com/in/al-amin-khan-shakil/)
 
+👤 **Robert Kanyoro**
+
+- GitHub: [@Kanyorok](https://github.com/Kanyorok)
+- Twitter: [@CarlosMbugua](https://twitter.com/CarlosMbugua)
+- LinkedIn: [Robert Mbugua](https://www.linkedin.com/in/robert-mbugua-kanyoro/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Users List**
-- **Post by users**
+- **User log in**
+- **Sing up user**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
