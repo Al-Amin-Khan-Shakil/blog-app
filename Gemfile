@@ -55,6 +55,10 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
   # This gem is used for rspec
   gem 'rspec-rails'
+  # gem capybara
+  gem 'capybara'
+  #gem webdriver
+  gem 'webdriver'
 end
 
 group :development do
@@ -70,6 +74,6 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
-  gem 'selenium-webdriver'
+  # gem 'capybara'
+  # gem 'selenium-webdriver'
 end
