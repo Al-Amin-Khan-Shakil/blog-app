@@ -4,13 +4,13 @@ RSpec.describe 'userpostpage#show', type: :feature do
     @user = User.create(name: 'John Doe',
                         photo: 'https://res.cloudinary.com/dsfuiu63q/image/upload/v1678870006/avatars/icon-256x256_wa30f0.png',
                         bio: 'Fullstack Dev Freelance',
-                        posts_count: 0)
-    @post1 = Post.create(author_id: @user.id, Title: 'My First Post', text: 'This is the content of my first post.',
-                         likes_count: 0, comments_count: 0)
-    @post2 = Post.create(author_id: @user.id, Title: 'Rails Rocks', text: 'Excited about Rails development!',
-                         likes_count: 0, comments_count: 0)
-    @post3 = Post.create(author_id: @user.id, Title: 'Learning Ruby', text: 'Exploring the beauty of Ruby language.',
-                         likes_count: 0, comments_count: 0)
+                        postsCounter: 0)
+    @post1 = Post.create(author_id: @user.id, title: 'My First Post', text: 'This is the content of my first post.',
+                         LikesCounter: 0, CommentsCounter: 0)
+    @post2 = Post.create(author_id: @user.id, title: 'Rails Rocks', text: 'Excited about Rails development!',
+                         LikesCounter: 0, CommentsCounter: 0)
+    @post3 = Post.create(author_id: @user.id, title: 'Learning Ruby', text: 'Exploring the beauty of Ruby language.',
+                         LikesCounter: 0, CommentsCounter: 0)
     visit user_path(@user.id)
   end
 
@@ -23,7 +23,7 @@ RSpec.describe 'userpostpage#show', type: :feature do
   end
 
   it 'I can see the number of posts the user has written' do
-    expect(page).to have_content 'Number of Posts: 3'
+    expect(page).to have_content 'Number of posts: 3'
   end
 
   it 'I can see the user\'s bio' do
@@ -37,7 +37,7 @@ RSpec.describe 'userpostpage#show', type: :feature do
   end
 
   it 'I can see a button that lets me view all of a user\'s posts' do
-    expect(page).to have_link('See all posts')
+    expect(page).to have_link('See All Posts')
   end
 
   it "When I click a user's post, it redirects me to that post's show page." do
@@ -46,7 +46,7 @@ RSpec.describe 'userpostpage#show', type: :feature do
   end
 
   it " When I click to see all posts, it redirects me to the user's post's index page. " do
-    click_on 'See all posts'
+    click_on 'See All Posts'
     expect(page).to have_content 'John Doe'
   end
 end

@@ -22,25 +22,28 @@ RSpec.describe 'userpage#index', type: :feature do
     ]
     visit users_path
   end
+
   describe '#index page' do
     it 'can view the usernames of all other users.' do
       expect(page).to have_content(@users[0].name)
     end
+
     it 'can view a profile picture for a given user.' do
       @users.each do |user|
         expect(page).to have_css("img[src='#{user.photo}']")
       end
     end
+
     it 'can check the amount of posts a user has written.' do
       @users.each do |user|
-        expect(page).to have_content(user.posts_count.to_s)
+        expect(page).to have_content(user.postsCounter)
       end
     end
+
     it 'redirects me to that posts show page when I click on a post' do
       page.all('div.col-lg-12.border.border-dark').each_with_index do |el, _i|
         within(el) { expect(page).to have_current_path(user_post_path(post.author, post)) }
       end
     end
   end
-
 end

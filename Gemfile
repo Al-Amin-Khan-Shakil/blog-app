@@ -57,7 +57,7 @@ group :development, :test do
   gem 'rspec-rails'
   # gem capybara
   gem 'capybara'
-  #gem webdriver
+  # gem webdriver
   gem 'webdriver'
 end
 
