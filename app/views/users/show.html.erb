@@ -7,7 +7,9 @@
   <div class = 'recent-posts'>
     <% if @user.most_recent_posts.any? %>
       <% @user.most_recent_posts.each do |post| %>
-      <%= render post %>
+      <a href="<%= user_post_path(@user, post) %>" class = "post-link">
+        <%= render post %>
+      </a>
       <% end %>
     <% else %>
       <p>The user have no post yet!</p>

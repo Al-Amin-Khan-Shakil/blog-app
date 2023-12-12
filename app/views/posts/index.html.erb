@@ -2,12 +2,12 @@
   <%= render @user %>
   <%= link_to 'Add New Post', new_user_post_path(@user), class: "add-post" %>
   <div class='user-posts'>
-    <% @posts.each do |post| %>
+    <% @user.posts.each do |post| %>
     <a href="<%= user_post_path(@user, post) %>" class = "post-link">
       <%= render post %>
     </a>
     <div class = "comments">
-      <% if post.most_recent_comments.any? %>
+      <% if post.comments.any? %>
         <% post.most_recent_comments.each do |comment| %>
           <p> <%= comment.user.name %> : <%= comment.text %> </p>
         <% end %>
