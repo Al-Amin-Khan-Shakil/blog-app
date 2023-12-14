@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:user_sign_out]
-
   def index
     @users = User.all
   end
