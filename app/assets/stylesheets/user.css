@@ -95,3 +95,65 @@ body {
   border-radius: 8px;
   margin: 20px 0;
 }
+
+.log_in {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80vw;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  width: 80vw;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.log_in input {
+  width: 100%;
+  padding: 12px 6px;
+}
+
+.sign_up .new_user input {
+  width: 100%;
+  padding: 12px 6px;
+}
+
+.log_in .field:nth-child(4) {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.log_in .field:nth-child(4) input {
+  width: 20px;
+}
+
+.sign_up {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  width: 80vw;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.sign_up textarea {
+  width: 100%;
+  height: 60px;
+  padding: 12px 6px;
+}
