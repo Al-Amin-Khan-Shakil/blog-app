@@ -4,7 +4,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(current_user)
-    @user = current_user || user
+    @user = current_user || User.new
 
     if @user.role == 'admin'
       can :manage, :all
