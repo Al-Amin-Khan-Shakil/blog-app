@@ -7,10 +7,11 @@
     <div class = "post">
       <p> <%= @post.text %> </p>
     </div>
+    <%= button_to 'Delete Post 📝', user_post_path(user_id: @post.author_id, id: @post.id), method: :delete, class: 'button' if can? :destroy, @post %>
   </div>
   <div class = "comments">
     <% @post.comments.each do |comment| %>
-    <p> <%= comment.user.name %> : <%= comment.text %> </p>
+    <p> <%= comment.user.name %> : <%= comment.text %> <%= button_to 'Delete Comment', user_post_comment_path(user_id: comment.user_id, post_id: comment.post_id, id: comment.id), method: :delete, class: 'button' if can? :destroy, comment %> </p>
     <% end %>
   </div>
   <div class = "opinion">

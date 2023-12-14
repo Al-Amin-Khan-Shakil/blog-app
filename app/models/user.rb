@@ -9,9 +9,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :postsCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :role, inclusion: { in: %w[admin user], message: 'Invalid role' }
 
-  enum role: [:user, :admin]
+  enum role: { user: 'user', admin: 'admin' }
 
   def admin?
     role == 'admin'
