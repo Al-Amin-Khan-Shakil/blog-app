@@ -29,6 +29,9 @@ gem 'jbuilder'
 # Use the devise gem as the session and account manager for the application
 gem 'devise', '~> 4.9'
 
+# Use the cancancan gem as the authorization manager for the applicationn
+gem 'cancancan'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
