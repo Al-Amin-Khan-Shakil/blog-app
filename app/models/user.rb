@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :comments
   has_many :likes
 
+  after_initialize :set_default_role, if: :new_record?
+
   validates :name, presence: true
   validates :postsCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
