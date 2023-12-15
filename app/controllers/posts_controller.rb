@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     @post.destroy!
     redirect_to user_posts_path(@post.author_id), notice: 'Post successfully deleted'
   end
-  
+
   private
 
   def post_params
